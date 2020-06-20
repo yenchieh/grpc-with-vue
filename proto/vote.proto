@@ -1,0 +1,26 @@
+
+syntax = "proto3";
+
+package vote;
+
+import "google/protobuf/empty.proto";
+
+
+message Topic {
+  uint64 id = 1;
+  string message = 2;
+  uint64 voteCount = 3;
+}
+
+message Topics {
+  repeated Topic topics = 1;
+}
+
+message RequestByID {
+  uint64 id = 1;
+}
+
+service Vote {
+  rpc GetTopics(google.protobuf.Empty) returns (Topics){}
+  rpc VoteTopic(RequestByID) returns (Topic){}
+}
