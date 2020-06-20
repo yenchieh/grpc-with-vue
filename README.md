@@ -61,3 +61,6 @@ To run envoy in docker
 ```
 $ make run-image
 ```
+
+Demo image:
+![image](https://storage.googleapis.com/jay-personal-bucket/everyone/gRPC_web_demo.png)
